@@ -10,6 +10,6 @@ console.log(`https://${subDomain}.serveo.net/`)
 while (true) {
 	try {
 		// TODO: サブドメイン埋まってたときの
-		execSync(`ssh -R ${subDomain}:80:localhost:${port} serveo.net`)
+		execSync(`ssh -o ServerAliveInterval=60 -R ${subDomain}:80:localhost:${port} serveo.net`)
 	} catch {}
 }
